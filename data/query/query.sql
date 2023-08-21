@@ -36,7 +36,12 @@ INSERT INTO Clube (ID_Clube) VALUES
 INSERT INTO Gestores(ID_Gestores, Clube_ID_Clube, Nome, RM, DataNasc) VALUES
 	(0001, 1, 'Alexander', 221007, '2005/10/04'),
 	(0002, 2, 'Isaac', 221697, '2005/06/26'),
-	(0003, 3, 'Gabrel Araújo', 231125, '2008/02/29');
+	(0003, 3, 'Gabrel Araújo', 231125, '2008/02/29'),
+	(0004, 4, 'Vinicius Marques', 231135,'2007/07/27');
+
+INSERT INTO Integrantes(ID_Integrante, Clube_ID_Clube, Nome, RM, DataNasc, Periodo) VALUES 
+	(5, 5, 'Ricardo Rabelo', 201826, '2004/10/24', 'Tarde - DS');
+	
 
 -- Selects
 
