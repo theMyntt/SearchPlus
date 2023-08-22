@@ -3,7 +3,8 @@
     margin: 0;
 }
 
-h1 {
+h1,
+h2 {
     font-weight: 200;
 }
 
@@ -11,12 +12,44 @@ h3 {
     font-weight: 400;
 }
 
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: left;
+
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+table {
+    margin: 0 auto;
+}
+
 header {
     /*height: 75px;*/
     /*box-shadow: 0 4px 8px 0 rgba(0.1, 0.1, 0.1, 0.7);*/
     border-bottom: 3px solid #000;
-    border-radius: 0 0 15px 15px;
+    width: 100%;
     padding: 20px 0 20px 1cm;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer
 }
 
 main {
@@ -29,7 +62,7 @@ main {
     margin-top: 1rem;
 }
 
-#btnSearch button {
+button {
     border: 0;
     background-color: #fff;
     border: 2px solid #000;
@@ -38,15 +71,24 @@ main {
     border-radius: 15px;
 }
 
-input[type=number] {
-    padding: 0 0 0 20px;
+input[type=number],
+#date {
+    padding: 0 20px 0 20px;
     width: 256px;
     height: 35px;
 }
 
 input[type=submit] {
     height: 40px;
-    width: 278px;
+    width: 298px;
+}
+
+#noCenter {
+    text-align: left;
+}
+
+#mit {
+    width: 40%;
 }
 
 input {
@@ -57,12 +99,28 @@ input {
 }
 
 footer {
-    position: fixed; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     margin: 0 auto;
     font-size: 12px;
     text-align: center;
     padding: 0 0 20px 0;
+}
+
+section button {
+    border: 0;
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 0 20px 0 20px;
+    height: 45px;
+    border-radius: 15px;
+    float: left;
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 6.5px;
+    }
 }

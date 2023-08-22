@@ -4,7 +4,7 @@
     <title>Search+ | Procurar</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-width=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div id="wrapper">
@@ -53,7 +53,9 @@
                     echo "Falha ao conectar ao banco de dados";
                 }
             ?> <br>
-            <button onclick="window.history.back();">Voltar</button>
+            <section>
+                <button onclick="window.history.back();">Voltar</button>
+            </section>
         </main>
     </div>
 </body>

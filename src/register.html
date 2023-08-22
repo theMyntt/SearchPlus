@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Search+ | Registro</title>
 </head>
+
 <body>
     <div id="wrapper">
         <header>
             <div class="nav">
-                <h1>Search+</h1>
+                <h1><a href="../index.html">Search+</a></h1>
             </div>
         </header>
         <main>
             <h3>Apenas responda o formulario abaixo se o usuario apareceu.</h3>
             <br>
             <form method="GET" name="comp" action="process/process.php">
-                <label>Digite o ID: <br><input type="number" name="id" placeholder="Digite aqui!"></label>
-                <br><br><input type="submit" value="Enviar!">
-            </form>
+                <label>Digite a data de hoje: <br><input type="text" name="datelcl" id="date" required pattern="\d{4}/\d{2}/\d{2}" placeholder="yyyy/mm/dd"></label><br><br>
+                <label>Digite o ID: <br><input type="number" name="id" placeholder="Digite aqui!" required></label>
+                <br><br><input type="submit" value="Confirmar participação!">
+            </form><br>
+            <h3><b>Atenção</b></h3>
+            <p>A data está no formato Americano: ano/mes/dia!</p>
         </main>
     </div>
 </body>
+
 </html>
