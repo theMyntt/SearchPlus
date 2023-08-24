@@ -5,26 +5,31 @@ if (isset($_GET['id']) && isset($_GET['datelcl'])) {
 
     if (preg_match('/^\d{4}\/\d{2}\/\d{2}$/', $datelcl)) {
         try {
-            $db = new PDO('sqlite:../../data/banco.db'); 
+            $host = 'localhost';
+            $dbname = 'ClubeDeLiteratura';
+            $user = 'root';
+            $password = '';
 
-            $query = "UPDATE Integrantes SET Participacao = Participacao + 1, Ult_Part = :datelcl WHERE ID_Integrante = :id";
+            $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password); 
+
+            $query = "UPDATE Integrantes SET Participacao = Participacao - 1, Ult_Part = :datelcl WHERE ID_Integrante = :id";
             $stmt = $db->prepare($query);
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->bindParam(':datelcl', $datelcl);
 
             if ($stmt->execute()) {
-                echo "Coluna atualizada com sucesso!";
+                echo "<p>Coluna atualizada com sucesso!</p>";
             } else {
-                echo "Erro ao atualizar a coluna.";
+                echo "<p>Erro ao atualizar a coluna.</p>";
             }
         } catch (PDOException $e) {
-            echo "Erro de conexão com o banco de dados: " . $e->getMessage();
+            echo "<p>Erro de conexão com o banco de dados: " . $e->getMessage() . "</p>";
         }
     } else {
-        echo "Formato de data inválido. Use o formato yyyy/mm/dd.";
+        echo "<p>Formato de data inválido. Use o formato yyyy/mm/dd.</p>";
     }
 } else {
-    echo "ID ou data não fornecidos.";
+    echo "<p>ID ou data não fornecidos.</p>";
 }
 ?>
 
@@ -33,3 +38,5 @@ if (isset($_GET['id']) && isset($_GET['datelcl'])) {
         font-family: "Segoe UI", sans-serif;
     }
 </style>
+
+<a href="../search.php">Ir para a tabela de Integrantes.</a>

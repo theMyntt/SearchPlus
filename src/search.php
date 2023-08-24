@@ -17,16 +17,20 @@
             <h2>Todos os Resultados na tabela Integrantes:</h2>
             <br>
             <?php
+                $host = 'localhost';
+                $dbname = 'ClubeDeLiteratura';
+                $user = 'root';
+                $password = '';
 
                 try {
-                    $conn = new PDO("sqlite:../data/banco.db");
+                    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
 
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     $query = "SELECT * FROM Integrantes";
                     $result = $conn->query($query);
 
-                    if ($result->rowCount() >= 0) {
+                    if ($result->rowCount() > 0) {
                         echo "<table>";
                         
                         $row = $result->fetch(PDO::FETCH_ASSOC);
@@ -46,11 +50,11 @@
 
                         echo "</table>";
                     } else {
-                        echo "<p>Nenhum resultado encontrado para a tabela Gestores.</p>";
+                        echo "<p>Nenhum resultado encontrado para a tabela Integrantes.</p>";
                     }
 
                 } catch (PDOException $e) {
-                    echo "Falha ao conectar ao banco de dados";
+                    echo "Falha ao conectar ao banco de dados: " . $e->getMessage();
                 }
             ?> <br>
             <section>

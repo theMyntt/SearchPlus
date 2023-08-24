@@ -1,3 +1,7 @@
+CREATE DATABASE ClubeDeLiteratura;
+
+USE ClubeDeLiteratura;
+
 -- Tables
 
 CREATE TABLE Clube (
@@ -42,10 +46,15 @@ INSERT INTO Gestores(ID_Gestores, Clube_ID_Clube, Nome, RM, DataNasc) VALUES
 	(0004, 4, 'Vinicius Marques', 231135,'2007/07/27');
 
 INSERT INTO Integrantes(ID_Integrante, Clube_ID_Clube, Nome, RM, DataNasc, Periodo, Participacao, Ult_Part) VALUES 
-	--(5, null, 'Ricardo Rabelo', 201826, '2004/10/24', 'Tarde - DS', 0, null),
-	--(1, null, 'Alexander', 221007, '2005/10/04', 'Tarde - DS', 0, null);
-	--(2, null, 'Isaac', 221697, '2005/06/26', 'Tarde - DS', 0, null);
-	(3, 'Vinicius Marques', 231135, 'Tarde - DS', 0, null);
+	(1, null, 'Alexander', 221007, '2005/10/04', '2BI', 0, null),
+	(2, null, 'Isaac', 221697, '2005/06/26', '2BI', 0, null),
+	(3, null, 'Vinicius Marques', 231135,'2007/07/27', '1BI', 0, null),
+    (4, null, 'Gabriel Araújo', 231125, '2008/02/29', '1BI', 0, null),
+    (5, null, 'Ricardo Rabelo', 201826, '2004/10/24', '2BI', 0, null),
+    (6, null, 'Maryane Ferreira', 231756, '2007/08/13', '1BD', 0, null),
+    (7, null, 'Nikolas dos Santos', 231170, '2008/03/11', '1AMT', 0, null),
+    (8, null, 'Nicolas Alvez', 231320, '2007/07/01', '1AE', 0, null),
+    (9, null, 'Maria Castro', 23130, '2008/05/31', '1BD', 0, null);
 
 -- Selects
 
