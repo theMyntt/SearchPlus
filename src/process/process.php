@@ -6,7 +6,7 @@ if (isset($_GET['id']) && isset($_GET['datelcl'])) {
     if (preg_match('/^\d{4}\/\d{2}\/\d{2}$/', $datelcl)) {
         try {
             $host = 'localhost';
-            $dbname = 'ClubeDeLiteratura';
+            $dbname = 'CDL';
             $user = 'root';
             $password = '';
 

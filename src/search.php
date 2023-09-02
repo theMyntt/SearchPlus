@@ -18,7 +18,7 @@
             <br>
             <?php
                 $host = 'localhost';
-                $dbname = 'ClubeDeLiteratura';
+                $dbname = 'CDL';
                 $user = 'root';
                 $password = '';
 
